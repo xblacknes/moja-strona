@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* --- Nawigacja --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* --- Sekcja hero --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("tlo.png") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: darkred;
+}
+
+/* --- Sekcje standardowe --- */
+.section {
+    padding: 80px 20px;
+    background: #111;
+    text-align: center;
+}
+
+.section:nth-child(even) {
+    background: #222;
+}
+
+/* --- Stopka --- */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 10px;
+}
+
+/* --- Responsywność --- */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0,0,0,0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+}
